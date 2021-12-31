@@ -230,8 +230,8 @@ class Bot {
     }
 
     sendMove(x, y, a = 1, d = 7) {
-        var newX = Math.floor(x * 3.2);
-        var newY = Math.floor(y * 3.2);
+        var newX = Math.floor(x * Math.PI);
+        var newY = Math.floor(y * Math.PI);
         if (this.x != newX || this.y != newY) {
             var buf = Buffer.alloc(8);
             buf.writeInt32LE(newX);
